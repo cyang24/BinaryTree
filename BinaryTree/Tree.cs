@@ -21,11 +21,11 @@ namespace BinaryTree
             return root;
         }
 
-        public void Insert(int id)
+        public void Insert(int toAdd)
         {
             Node newNode = new Node();
 
-            newNode.item = id;
+            newNode.item = toAdd;
             if (root == null)
                 root = newNode;
             
@@ -33,10 +33,11 @@ namespace BinaryTree
             {
                 Node current = root;
                 Node parent;
+
                 while (true)
                 {
                     parent = current;
-                    if (id < current.item)
+                    if (toAdd < current.item)
                     {
                         current = current.left;
                         if (current == null)
@@ -58,6 +59,7 @@ namespace BinaryTree
             }
         }
 
+
         public void Preorder(Node Root)
         {
             if (Root != null)
@@ -67,6 +69,7 @@ namespace BinaryTree
                 Preorder(Root.right);
             }
         }
+
         public void Inorder(Node Root)
         {
             if (Root != null)
@@ -76,6 +79,7 @@ namespace BinaryTree
                 Inorder(Root.right);
             }
         }
+
         public void Postorder(Node Root)
         {
             if (Root != null)
@@ -85,28 +89,5 @@ namespace BinaryTree
                 Console.Write(Root.item + " ");
             }
         }
-
-        public bool Contains(T data)
-        {
-            // search the tree for a node that contains data
-            Tree tree = Node root;
-            int result;
-            while (tree != null)
-            {
-                result = comparer.Compare(current.Value, data);
-                if (result == 0)
-                    // we found data
-                    return true;
-                else if (result > 0)
-                    // current.Value > data, search current's left subtree
-                    current = current.Left;
-                else if (result < 0)
-                    // current.Value < data, search current's right subtree
-                    current = current.Right;
-            }
-
-            return false;       // didn't find data
-        }
-
     }
 }

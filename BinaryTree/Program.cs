@@ -11,20 +11,20 @@ namespace BinaryTree
 
 
             Tree binaryTree = new Tree();
-            binaryTree.Insert(20);
-            binaryTree.Insert(25);
-            binaryTree.Insert(45);
+            binaryTree.Insert(1);
+            binaryTree.Insert(7);
+            binaryTree.Insert(84);
+            binaryTree.Insert(10);
+            binaryTree.Insert(18);
+            binaryTree.Insert(87);
+            binaryTree.Insert(30);
+            binaryTree.Insert(58);
+            binaryTree.Insert(73);
             binaryTree.Insert(15);
-            binaryTree.Insert(67);
-            binaryTree.Insert(43);
-            binaryTree.Insert(80);
-            binaryTree.Insert(33);
-            binaryTree.Insert(67);
-            binaryTree.Insert(99);
             binaryTree.Insert(91);
 
-            Console.WriteLine("Inorder Traversal : ");
-            binaryTree.Inorder(binaryTree.ReturnRoot());
+            Console.WriteLine("Preorder Traversal : ");
+            binaryTree.Preorder(binaryTree.ReturnRoot());
             Console.WriteLine(" ");
             Console.WriteLine();
         }
