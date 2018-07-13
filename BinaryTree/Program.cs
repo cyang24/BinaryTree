@@ -9,7 +9,6 @@ namespace BinaryTree
         public static void Main(string[] args)
         {   
 
-
             Tree binaryTree = new Tree();
             binaryTree.Insert(1);
             binaryTree.Insert(7);
@@ -22,11 +21,13 @@ namespace BinaryTree
             binaryTree.Insert(73);
             binaryTree.Insert(15);
             binaryTree.Insert(91);
+            binaryTree.Insert(240);
 
-            Console.WriteLine("Preorder Traversal : ");
-            binaryTree.Preorder(binaryTree.ReturnRoot());
-            Console.WriteLine(" ");
-            Console.WriteLine();
+            Console.WriteLine("\n");
+
+            User_Interface user_Interface = new User_Interface(binaryTree);
+
+            Console.ReadLine();
         }
     }
 }

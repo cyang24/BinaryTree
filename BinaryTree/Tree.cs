@@ -58,36 +58,5 @@ namespace BinaryTree
                 }
             }
         }
-
-
-        public void Preorder(Node Root)
-        {
-            if (Root != null)
-            {
-                Console.Write(Root.item + " ");
-                Preorder(Root.left);
-                Preorder(Root.right);
-            }
-        }
-
-        public void Inorder(Node Root)
-        {
-            if (Root != null)
-            {
-                Inorder(Root.left);
-                Console.Write(Root.item + " ");
-                Inorder(Root.right);
-            }
-        }
-
-        public void Postorder(Node Root)
-        {
-            if (Root != null)
-            {
-                Postorder(Root.left);
-                Postorder(Root.right);
-                Console.Write(Root.item + " ");
-            }
-        }
     }
 }
